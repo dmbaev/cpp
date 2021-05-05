@@ -25,9 +25,8 @@ int main() {
 
 	while (_Dec_int > 1)
 	{
-		int _i = _Dec_int / 2;
-		_ourBin += to_string(_Dec_int - (_i * 2));
-		_Dec_int = _i;
+		_ourBin += to_string(_Dec_int % 2);
+		_Dec_int /=2;
 	}
 	_ourBin += to_string(_Dec_int);
 	reverse(_ourBin.begin(), _ourBin.end());
