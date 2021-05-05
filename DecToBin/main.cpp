@@ -6,12 +6,12 @@ using namespace std;
 
 string _ourBin;
 string _Dec;
+
 int main() {
 	
 	cout << "Input dec: ";
 	cin >> _Dec;
 	cout << endl;
-
 	for (auto _l : _Dec)
 	{
 		if (!isdigit(_l))
@@ -22,7 +22,6 @@ int main() {
 	}
 	int _Dec_int;
 	_Dec_int = stoi(_Dec);
-
 	while (_Dec_int > 1)
 	{
 		_ourBin += to_string(_Dec_int % 2);
@@ -30,7 +29,6 @@ int main() {
 	}
 	_ourBin += to_string(_Dec_int);
 	reverse(_ourBin.begin(), _ourBin.end());
-
 	cout << "Dec to bin: " << _ourBin;
 	return stoi(_ourBin);
 }
